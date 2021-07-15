@@ -1,5 +1,7 @@
 # React Chrome Extension Boilerplate
 
+Boilerplate for building Chrome Extensions in React and TypeScript using a simple Webpack build process.
+
 ## Getting Started
 
 1. `npm i` to install dependancies
@@ -13,13 +15,13 @@
 3. Click `Load unpacked`
 4. Select the entire `dist` folder
 
-# Production Build
+## Production Build
 
 1. `npm run build` to generate a minimized production build in the `dist` folder
 2. ZIP the entire `dist` folder (e.g. `dist.zip`)
 3. Publish the ZIP file on the Chrome Web Store Developer Dashboard!
 
-# Initial Steps
+## Initial Steps
 
 1. `git init` to start a new git repo for tracking your changes, do an initial base commit with all the default files
 2. Update `package.json`, important fields include `author`, `version`, `name` and `description`
