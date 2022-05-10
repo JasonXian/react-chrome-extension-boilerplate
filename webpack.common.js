@@ -42,10 +42,18 @@ module.exports = {
         }
       ]
     }),
-    ...getHtmlPlugins([
-      'popup',
-      'options'
-    ]),
+    new HtmlPlugin({
+      title: 'React Extension',
+      filename: 'popup.html',
+      chunks: ['popup'],
+      template: 'src/popup/popup_template.html',
+    }),
+    new HtmlPlugin({
+      title: 'React Extension',
+      filename: 'options.html',
+      chunks: ['options'],
+      template: 'src/options/options_template.html',
+    })
   ],
   output: {
     filename: '[name].js',
@@ -58,12 +66,4 @@ module.exports = {
       }
     },
   }
-}
-
-function getHtmlPlugins(chunks) {
-  return chunks.map(chunk => new HtmlPlugin({
-    title: 'React Extension',
-    filename: `${chunk}.html`,
-    chunks: [chunk],
-  }))
 }
